@@ -1,90 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&family=Staatliches&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&family=Staatliches&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+        integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"
+        integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg=="
+        crossorigin="anonymous"></script>
+
 </head>
+
 <body>
     <header>
         <nav>
-            <h1>JS</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Projects</a></li>
-            </ul>         
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="mylogo" style="cursor: pointer">
+                <h1>JS</h1>
+            </div>
+            <ul class="nav-links">
+                <li class = "aboutme_link" style="cursor: pointer">About Me</li>
+                <li class = "myexperience_link" style="cursor: pointer">Experiences & Projects</li>
+                <li class = "contact_link" style="cursor: pointer">Contact</li>
+            </ul>
+
         </nav>
     </header>
 
     <main>
         <section class="home">
-            <div class = "introduction">              
+            <div class="introduction">
                 <ul>
                     <li>HI</li>
                     <li>I'M JUNSHICK</li>
                     <li>WELCOME!</li>
-                </ul>          
+                </ul>
             </div>
-            <div class = "scroll"><img src="./img/down.png"/></div>
+            <div class="scroll"><img src="./img/down.png" /></div>
         </section>
+
         <section class="aboutme">
-     
-            <div class = "title"><h2>ABOUT ME</h2></div>
-            <div class = "myface"><img src ="./img/myFace.png"/></div>
-            <div class = "thumbsup"><img src ="./img/thumbsup.png" /></div>
-            
-            <div class = "description">
-                I'm Junshick Yoon a coding enthusiast! I majored computer science and just graduated college!
-                    Now, I'm not fully matured as a web developer but I'm consistently working on it! Thanks for visiting my website and if I caught your attention please contact!
+            <div class="title">
+                <h2>ABOUT ME</h2>
             </div>
-   
-        </section>
- 
-        <section class="thingsIdo">
-            <div class="title"><h2>THINGS I DO</h2></div>
-            <div class="menu">
-                <div class = "idoBox">
-                    <h3>CODING</h3>
-                    <img src = "./img/web.png"/>
-                    <p>I love to write code. I like to face problems that are difficult to solve.
-                    </p>
+            <div class="myface"><img src="./img/myFace.png" /></div>
+            <div class="thumbsup"><img src="./img/thumbsup.png" /></div>
+
+            <div class="description">
+                I'm Junshick Yoon a coding enthusiast! I majored computer science and just graduated college!
+                Now, I'm not fully matured as a web developer but I'm consistently working on it! Thanks for
+                visiting my
+                website and if I caught your attention please contact!
+            </div>
+     
+            <div class="thingsIdo">
+                <div class="title scroll_animation">
+                    <div class="t_title">{ THINGS I DO }</div>
                 </div>
-                <div class = "idoBox">
-                    <h3>DEVELOP</h3>
-                    <img src = "./img/develop.png"/>
-                    <p>My life goal is to improve myself in daily bases. I believe in steady progress.</p>
+                <div class="menu scroll_animation">
+                    <div class="idoBox">
+                        <h3>CODING</h3>
+                        <img src="./img/web.png" />
+                        <p>I love to write code. I like to face problems that are difficult to solve.
+                        </p>
+                    </div>
+                    <div class="idoBox">
+                        <h3>DEVELOP</h3>
+                        <img src="./img/develop.png" />
+                        <p>My life goal is to improve myself in daily bases. I believe in steady progress.</p>
+                    </div>
+                    <div class="idoBox">
+                        <h3>BASEBALL</h3>
+                        <img src="./img/baseball.png" />
+                        <p>Baseball is another big part of my life.
+                            It taught me to keep challenge myself.
+                        </p>
+                    </div>
                 </div>
-                <div class = "idoBox">
-                    <h3>BASEBALL</h3>
-                    <img src = "./img/baseball.png"/>
-                    <p>Baseball is another big part of my life.
-                        It taught me to keep challenge myself.
-                    </p>
-                </div>
-            </div>            
+            </div>
+            
         </section>
 
         <section class="myexperience">
-            <div class="title"><h2>MY EXPERIENCE</h2></div>
-            <div class="myexperience_newbox"> 
-                <div><h3>Based on</h3><img src = "./img/myskills.png" class = "myskill"/></div>   
-                <div>
-                    <div><h3>Mostly</h3><h2>Frontend & Backend</h2></div>
-                    <div><h3>A little bit of..</h3><h2>Embedded programing</h2></div>
+            
+            <div class="title">
+                <h2>MY EXPERIENCE</h2>
+            </div>
+
+            <div class="myfield">
+                <h3>Mostly</h3>
+                <h2>Frontend & Backend</h2>
+            </div>
+            <div class="myfield">
+                <h3>A little bit of..</h3>
+                <h2>Embedded programing</h2>
+            </div>
+            <div class="myexperience_newbox scroll_animation">
+               
+                <div class="myskills">
+                    <h3>I'v experienced</h3>
+                    <img src="./img/myskills.png" />
                 </div>
-            </div>  
+            </div>
         </section>
 
         <section class="projects">
-            <div class="title"><h2>MY PROJECTS</h2></div>
-            <div><h3>Coming soon...</h3></div>
+            <div class="title">
+                <h2>MY PROJECTS</h2>
+            </div>
+            <div class="projectArray scroll_animation">
+                <div class="project">
+                    <img src="./img/p_siwon.png"/>             
+                </div>
+                <div class="project">
+                    <img src="./img/p_siwon.png"/>
+                </div>
+                <div class="project">
+                    <img src="./img/p_siwon.png"/>
+                </div>
+            </div>
         </section>
 
         <section class="contact">
@@ -92,23 +141,28 @@
                 <h2>CONTACT</h2>
             </div>
 
-            <div class="c_bottom">
-                <div>
+            <div class="c_bottom ">
+                <div class="links">
                     <h3>Click here</h3>
-                    <div class="c_resume"><h3>View Resume</h2></div>
+                    <div class="c_resume" style="cursor: pointer">
+                        <h3>VIEW RESUME</h3>
+                    </div>
                 </div>
                 <div class="links">
                     <div class="link">
                         <img src="./img/instagram.svg" alt="" />
-                        <h3>Instagram: @kingjunshick</h3>
+                        <h2>Instagram: &nbsp;</h2>
+                        <h3><a href="https://www.instagram.com/kingjunsik/">@kingjunshick</a></h3>
                     </div>
                     <div class="link">
                         <img src="./img/email.svg" alt="" />
-                        <h3>E-maill: hellojun12@naver.com</h3>
+                        <h2>E-maill: &nbsp;</h2>
+                        <h3>hellojun12@naver.com</h3>
                     </div>
                     <div class="link">
                         <img src="./img/github.svg" alt="" />
-                        <h3>GitHub</h3>
+                        <h2>GitHub: &nbsp;</h2>
+                        <h3><a href="https://github.com/hellojun12">github.com/hellojun12</a></h3>
                     </div>
                 </div>
             </div>
@@ -116,6 +170,7 @@
         </section>
     </main>
 
-    <script src="app.js"></script>
+    <script src="app.js"></script> 
 </body>
+
 </html>
