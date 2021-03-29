@@ -17,6 +17,11 @@ ul{
 
 h2{
     font-size: 3rem;
+    font-weight: 500;
+}
+
+h3{
+    font-weight: 500;
 }
 
 p{
@@ -27,15 +32,77 @@ header{
     position: sticky;
     top: 0px;
     background: white;
+    z-index: 1;
 }
 
 nav{
-    min-height: 8vh;
-    margin: auto;
-    width: 90%;
+    height: 8vh;
     display: flex;
+}
+
+nav .mylogo{
+    height: 100%;
+    width: 10%;
+    display:flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+}
+
+.mylogo h1{
+    margin-left: 5vw;
+}
+
+.nav-links{
+
+    margin-left: 30vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+@media screen and (max-width: 1268px){
+
+    .line{
+        width: 30px;
+        height: 3px;
+        background: black;
+        margin: 5px;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+    .nav-links{
+       
+        position: fixed;
+        background: white;
+        height: 100vh;
+        width: 50%;
+        flex-direction: column;
+        margin-left: 100%;
+        
+
+    }
+
+    .nav-links.open{
+       margin-left: 50%;
+       transition: margin-left 0.8s ease-in;
+    }
+
+    .landing{
+        flex-direction: column;
+    }
 }
 
 nav h1,
@@ -62,7 +129,18 @@ section{
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    padding:9vh;
+    padding: 9vh;
+}
+
+.scroll_animation {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s ease-out;
+}
+
+.scroll_animation.visible{
+    opacity: 1;
+    transform: none;
 }
 
 .title{
@@ -89,20 +167,21 @@ section{
 
 .home .scroll{
     position: relative;
-    top: 8rem;
+    top: 20vh;
     /*Animation*/
-    animation: scroll 1s ease-in Infinite;
+    animation: downmark 1.3s ease-out Infinite;
 }
 
-@keyframes scroll{
+@keyframes downmark{
     0% {
-        top:120px;
+        top: 19vh;
     }
    
 }
 
-.aboutme img{
+.aboutme .myface img{
     width: 7vw;
+    min-width: 100px;
     margin-bottom: 1rem;
 }
 
@@ -112,7 +191,7 @@ section{
 
 .aboutme .thumbsup img{
     position: absolute;
-    bottom: 1vh;
+    bottom: 2.5vh;
     left: 1.5vw;
     animation: thumbsup 4s ease-in Infinite;
 }
@@ -134,25 +213,33 @@ section{
 }
 
 .aboutme .description {
-    margin-left: 30vw;
-    margin-right: 30vw;
+    min-width:300px;
+    max-width:1000px;
     font-size: 1.3rem;
 }
 
 .thingsIdo{
-    background-color: rgb(230,230,230);
+    background-color: rgba(232,232,232, 0.7);
+    margin-top: 7vh;
+    padding: 3vh;
+    width: 70%;
+}
+
+.thingsIdo .t_title {
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .thingsIdo .menu {
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items:start;
     margin-top: 4vh;
 }
 
 .thingsIdo .idoBox {
     
-    width: 10%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,52 +250,138 @@ section{
     margin-bottom: 1.5rem;
 }
 
+.thingsIdo img{
+    width: 25%;
+    min-width: 30px;
+}
+
 .thingsIdo p {
     text-align: center;
 }
 
+.myexperience{
+    background-color:rgba(232,232,232, 0.7);
+}
+
+.myexperience h3{
+    font-size: 1.6rem;
+}
 .myexperience_newbox{
+    margin-top: 10vh;
     display: flex;
-    justify-content: space-evenly;
-    width:100%;
-    margin-top: 4vh;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
 }
 
-.myexperience_newbox h2{
-    margin-bottom: 5rem;
+.myexperience img{
+    margin-top: 2vh;
+    width: 100%;
+    object-fit: cover;
 }
 
-.myexperience_newbox h3{
-    margin-bottom: 1.5rem;
+.myexperience .myskills{
+    width: 60%;
+    min-width: 400px;
+    margin-top: 2vh;
+}
+
+.myexperience .myfield{
+    
+    margin-top: 6vh;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.8;
+
 }
 
 .projects {  
-    background-color: rgb(230,230,230);
+    background-color: white;
+}
+
+.projects .projectArray{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.projects .projectArray .project{
+    box-shadow: 0px 0px 5px rgb(155,155,155);
+    background-color: white;
+    width: 32%;
+    min-width:300px;
+    margin-top: 3vh; 
+    transition-duration: 0.5s;
+}
+
+.projects .projectArray .project:hover{
+    box-shadow: 0px 0px 15px rgb(60, 60, 60);
+}
+
+
+.projects .projectArray .project img{
+    width: 100%;
+}
+
+@media screen and (max-width: 1268px){
+   
+    .projects .projectArray{
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+}
+
+.contact {
+    background-color:rgba(232,232,232, 0.7);
 }
 
 .contact .c_bottom{
-    width: 100%;
+    width: 50%;
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3vh;
 }
+
 
 .contact .c_bottom .c_resume{
-    margin-top: 1vh;
-    padding: 0.7rem;
-    border: 3px solid;
+ 
+    padding: 1rem;
+    border: 2px solid;
     border-radius: 20px;
-}
-.contact .con_message{
-    width: 33%;
-    margin-bottom: 15vh;
+    margin-top: 0.5vh;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
+@media screen and (max-width: 1268px){
+    
+    .contact .c_bottom{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact .c_bottom .c_resume{
+        margin-bottom: 5vh;
+    }
+}
 .contact .link{
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-top: 2vh;
 }
 
 .contact img{
@@ -216,9 +389,11 @@ section{
     margin-right: 1rem;
 }
 
-.contact h3{
+.contact .link h2{
     font-size: 1.5rem;
+    font-weight: 800;
 }
+
 
 
 
