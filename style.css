@@ -171,14 +171,6 @@ section{
     color: white;
 }
 
-@media screen and (max-width: 1268px){
-    .home ul li{
-        font-size: 12vh;
-        font-weight: 300;
-        opacity: 0.9;
-        color: white;
-    } 
-}
 
 
 .home .scroll{
